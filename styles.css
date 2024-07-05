@@ -1,9 +1,11 @@
+/* Resetowanie domyślnych styli */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,13 +14,27 @@ body {
     padding: 0;
 }
 
+/* Header styles */
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px 20px; /* większy padding dla lepszego wyglądu */
     text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* wyższy indeks zabezpiecza go przed innymi treściami */
+    display: flex;
+    justify-content: space-between; /* wyrównanie elementów do lewej i prawej */
+    align-items: center; /* wycentrowanie w pionie */
 }
 
+/* Logo styles */
+.logo {
+    margin-left: 20px; /* margines z lewej strony logo */
+}
+
+/* Navigation styles */
 nav {
     background-color: #333;
     overflow: hidden;
@@ -29,10 +45,11 @@ nav ul {
     margin: 0;
     padding: 0;
     text-align: center;
+    display: flex; /* Elementy listy są wyświetlane obok siebie */
 }
 
 nav ul li {
-    display: inline;
+    flex: 1; /* Każdy element listy zajmuje równą część przestrzeni */
 }
 
 nav ul li a {
@@ -41,45 +58,72 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #111;
 }
 
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+/* Hamburger menu icon for smaller screens */
+.hamburger-menu {
+    display: none; /* ukryty domyślnie na większych ekranach */
+    cursor: pointer;
+    padding: 10px;
 }
 
-section {
+.hamburger-menu div {
+    width: 25px;
+    height: 3px;
     background-color: white;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+    transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
+/* Media query dla mniejszych ekranów (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px; /* większy padding dla lepszego wyglądu */
+    }
+
+    .logo {
+        margin-left: 10px; /* zmniejszenie marginesu logo */
+    }
+
     nav ul {
-        display: flex;
-        justify-content: center;
+        display: none; /* ukryj linki nawigacyjne domyślnie */
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 60px; /* odstęp od góry strony */
+        left: 0;
+        background-color: #333;
+        z-index: 999; /* niższy indeks zabezpiecza go przed nagłówkiem */
+    }
+
+    nav ul.show {
+        display: flex; /* pokaż linki nawigacyjne po dodaniu klasy */
     }
 
     nav ul li {
-        margin-right: 20px;
+        width: 100%;
+        text-align: center;
     }
 
-    .main-content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    .hamburger-menu {
+        display: block; /* pokaż ikonę hamburgera */
     }
 
-    section {
-        width: 45%;
+    /* Obróć ikonę hamburgera dla otwartego stanu */
+    .hamburger-menu.open .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.open .line2 {
+        opacity: 0; /* ukryj środkową linię */
+    }
+
+    .hamburger-menu.open .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
