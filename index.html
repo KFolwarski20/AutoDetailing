@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twoja Strona</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -28,8 +29,40 @@
                 </div>
             </nav>
         </header>
-        <section class="main-content">
-            <!-- Tutaj dalsza zawartość strony -->
+        <section class="main-content"></section>
+            <!-- Karuzela zdjęć -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/bmw_m3.jpeg" alt="BMW M3">
+                        <div class="slide-text">
+                            <h2>Profesjonalne Detailing BMW M3</h2>
+                            <p>Zadbaj o swoje BMW M3 z naszymi profesjonalnymi usługami detailingowymi. Oferujemy kompleksowe czyszczenie i pielęgnację wnętrza oraz zewnątrz samochodu.</p>
+                            <a href="#" class="btn">Dowiedz się więcej</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/bmw_m4.avif" alt="BMW M4">
+                        <div class="slide-text">
+                            <h2>Profesjonalne Detailing BMW M4</h2>
+                            <p>Zadbaj o swoje BMW M4 z naszymi profesjonalnymi usługami detailingowymi. Oferujemy kompleksowe czyszczenie i pielęgnację wnętrza oraz zewnątrz samochodu.</p>
+                            <a href="#" class="btn">Dowiedz się więcej</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/bmw_m5.jpeg" alt="BMW M5">
+                        <div class="slide-text">
+                            <h2>Profesjonalne Detailing BMW M5</h2>
+                            <p>Zadbaj o swoje BMW M5 z naszymi profesjonalnymi usługami detailingowymi. Oferujemy kompleksowe czyszczenie i pielęgnację wnętrza oraz zewnątrz samochodu.</p>
+                            <a href="#" class="btn">Dowiedz się więcej</a>
+                        </div>
+                    </div>
+                    <!-- Dodaj więcej zdjęć według potrzeby -->
+                </div>
+                <!-- Przyciski nawigacyjne -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </section>
         <footer>
             <div class="footer-content">
@@ -56,7 +89,11 @@
             </div>
         </footer>
     </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Własne skrypty -->
     <script src="scripts/hamburgerMenu.js"></script>
     <script src="scripts/stickyHeaderEffect.js"></script>
+    <script src="scripts/carousel.js"></script>
 </body>
 </html>
