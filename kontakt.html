@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/bmw_logo.png" alt="Logo">
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="o_nas.html">O nas</a></li>
+                    <li><a href="oferta.html">Oferta</a></li>
+                    <li><a href="realizacje.html">Realizacje</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <div class="hamburger-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="contact-section">
+                <div class="contact-section-info">
+                    <h2>Kontakt</h2>
+                    <p>Adres: ul. Przykładowa 1, 00-000 Miasto</p>
+                    <p>Email: kontakt@example.com</p>
+                    <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+                </div>
+
+                <div class="contact-form">
+                    <h2>WYCEŃ USŁUGĘ</h2>
+                    <form action="submit_form.php" method="POST">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Telefon</label>
+                        <input type="tel" id="phone" name="phone">
+
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">Wyślij</button>
+                    </form>
+                </div>
+
+                <div class="map-container">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195278.27797593787!2d13.144366480929898!3d52.5078119976834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851f8b37540e9%3A0x42ab6c7b9fa634d8!2sBerlin%2C%20Germany!5e0!3m2!1sen!2sus!4v1628601534488!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Kontakt</h3>
+                    <p>Adres: ul. Przykładowa 1, 00-000 Miasto</p>
+                    <p>Email: kontakt@example.com</p>
+                    <p>Telefon: +48 123 456 789</p>
+                </div>
+                <div class="social-media">
+                    <h3>Social Media</h3>
+                    <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/tiktok.png" alt="TikTok"></a>
+                    <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+                </div>
+                <div class="information">
+                    <h3>Informacje</h3>
+                    <p><a href="#">Polityka prywatności</a></p>
+                    <p><a href="#">Regulamin</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Twoja Strona. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="scripts/hamburgerMenu.js"></script>
+    <script src="scripts/stickyHeaderEffect.js"></script>
+    <script src="scripts/pictureHandling.js"></script>
+</body>
+</html>
