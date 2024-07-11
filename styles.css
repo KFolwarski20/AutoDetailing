@@ -458,7 +458,7 @@ nav ul li a:hover::before {
     width: 100%;
     padding: 15px;
     font-size: 18px; /* Większa czcionka dla przycisku */
-    background-color: #007bff;
+    background-color: #ff4500;
     color: white;
     border: none;
     border-radius: 6px;
@@ -467,7 +467,7 @@ nav ul li a:hover::before {
 }
 
 .contact-form button:hover {
-    background-color: #0056b3;
+    background-color: #e63946;
 }
 
 .map-container {
@@ -538,6 +538,55 @@ nav ul li a:hover::before {
     max-width: 100%;
     border-radius: 8px; /* Zaokrąglone brzegi dla zdjęcia */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+}
+
+/* Styl dla sekcji ofert */
+
+.offers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ustaw 3 kolumny po 1 frakcji */
+    gap: 20px;
+    margin: 100px 20px 20px 20px;
+}
+
+/* Styl dla pojedynczej oferty */
+.offer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.offer img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.offer h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.offer p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.offer .btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.offer .btn:hover {
+    background-color: #e63946;
 }
 
 /* Footer styles */
