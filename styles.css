@@ -110,66 +110,6 @@ nav ul li a:hover::before {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    header {
-        padding: 10px 20px; /* większy padding dla lepszego wyglądu */
-    }
-
-    .logo {
-        margin-left: 10px; /* zmniejszenie marginesu logo */
-    }
-
-    nav ul {
-        display: none; /* ukryj linki nawigacyjne domyślnie */
-        flex-direction: column;
-        position: absolute;
-        width: 100%;
-        top: 60px; /* odstęp od góry strony */
-        left: 0;
-        background-color: #000000;
-        z-index: 999; /* niższy indeks zabezpiecza go przed nagłówkiem */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* cień dla menu */
-    }
-
-    nav ul.show {
-        display: flex; /* pokaż linki nawigacyjne po dodaniu klasy */
-        animation: slideDown 0.3s ease; /* animacja dla rozwijanego menu */
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hamburger-menu {
-        display: block; /* pokaż ikonę hamburgera */
-    }
-
-    /* Obróć ikonę hamburgera dla otwartego stanu */
-    .hamburger-menu.open .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .hamburger-menu.open .line2 {
-        opacity: 0; /* ukryj środkową linię */
-    }
-
-    .hamburger-menu.open .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    @keyframes slideDown {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-}
-
 .main-content {
     flex: 1;
     display: flex;
@@ -351,7 +291,7 @@ nav ul li a:hover::before {
 }
 
 .realization-card {
-    background-color: #fff;
+    background-color: #e0e0e0;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -463,25 +403,41 @@ nav ul li a:hover::before {
     padding: 40px;
     margin-top: 60px;
     text-align: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,78,1) 50%, rgba(0,0,0,1) 100%);
+    font-family: Arial, sans-serif; /* Spójna czcionka */
 }
 
 .contact-section-info, .contact-form {
     width: 100%;
+    max-width: 1000px; /* Maksymalna szerokość dla wygody czytania */
     margin-bottom: 40px;
-    background-color: #fff; /* Jasne tło */
-    padding: 30px; /* Większe wewnętrzne odstępy */
-    border-radius: 10px; /* Delikatnie zaokrąglone brzegi */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    background-color: #e0e0e0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-section-info h2, .contact-form h2 {
-    margin-bottom: 30px; /* Większy margines dla nagłówków */
-    font-size: 32px; /* Większa czcionka dla nagłówków */
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #333; /* Stonowany kolor nagłówków */
 }
 
-.contact-info p, .contact-form label {
+.contact-section-info p, .contact-form label {
     font-size: 18px;
     line-height: 1.8;
+    color: #555; /* Przyjemny kolor tekstu */
+}
+
+.contact-section-info a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease-in-out; /* Płynne przejście koloru */
+}
+
+.contact-section-info a:hover {
+    color: #FF024F; /* Wyrazisty kolor na hover */
 }
 
 .contact-form form {
@@ -494,11 +450,12 @@ nav ul li a:hover::before {
 .contact-form input[type="tel"],
 .contact-form textarea {
     width: 100%;
-    padding: 15px; /* Większe wewnętrzne odstępy */
+    padding: 15px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 6px; /* Lekko zaokrąglone brzegi */
+    border-radius: 6px;
     transition: border-color 0.3s ease-in-out;
+    background-color: #fafafa; /* Delikatne tło dla wejść */
 }
 
 .contact-form input[type="text"]:focus,
@@ -516,7 +473,7 @@ nav ul li a:hover::before {
 .contact-form button {
     width: 100%;
     padding: 15px;
-    font-size: 18px; /* Większa czcionka dla przycisku */
+    font-size: 18px;
     background-color: #FF024F;
     color: white;
     border: none;
@@ -531,6 +488,7 @@ nav ul li a:hover::before {
 
 .map-container {
     width: 100%;
+    max-width: 1000px; /* Maksymalna szerokość mapy */
     height: 400px;
     margin-top: 40px;
     border-radius: 10px;
@@ -550,7 +508,7 @@ nav ul li a:hover::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e0e0e0; /* Białe tło sekcji */
+    background-color: #e0e0e0;
     margin-top: 60px;
     padding: 40px;
     border-radius: 8px;
@@ -729,4 +687,72 @@ footer {
 .footer-bottom p {
     margin: 0;
     font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px; /* większy padding dla lepszego wyglądu */
+    }
+
+    .logo {
+        margin-left: 10px; /* zmniejszenie marginesu logo */
+    }
+
+    nav ul {
+        display: none; /* ukryj linki nawigacyjne domyślnie */
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 60px; /* odstęp od góry strony */
+        left: 0;
+        background-color: #000000;
+        z-index: 999; /* niższy indeks zabezpiecza go przed nagłówkiem */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* cień dla menu */
+    }
+
+    nav ul.show {
+        display: flex; /* pokaż linki nawigacyjne po dodaniu klasy */
+        animation: slideDown 0.3s ease; /* animacja dla rozwijanego menu */
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: block; /* pokaż ikonę hamburgera */
+    }
+
+    /* Obróć ikonę hamburgera dla otwartego stanu */
+    .hamburger-menu.open .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.open .line2 {
+        opacity: 0; /* ukryj środkową linię */
+    }
+
+    .hamburger-menu.open .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .about-section {
+        display: block;
+    }
+
+    .slide-text {
+        width: 80%;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }    
 }
