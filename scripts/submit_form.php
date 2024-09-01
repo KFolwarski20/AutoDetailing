@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST["phone"];
     $message = $_POST["message"];
 
-    $to = "kontakt@example.com";
+    $to = "biuro.detailareastore@gmail.com";
     $subject = "Nowa wiadomość od $name";
     $headers = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";

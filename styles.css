@@ -380,11 +380,12 @@ nav ul li a:hover::before {
 }
 
 .close-btn {
-    position: absolute;
+    position:sticky;
     top: 10px;
     right: 10px;
-    font-size: 30px;
-    color: #333;
+    margin-left: 95%;
+    font-size: 50px;
+    color: #FF004E;
     cursor: pointer;
 }
 
@@ -572,7 +573,7 @@ nav ul li a:hover::before {
 .offer {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Dodatkowe wyrównanie elementów */
+    justify-content: center; /* Dodatkowe wyrównanie elementów */
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 8px;
@@ -582,7 +583,9 @@ nav ul li a:hover::before {
 }
 
 .offer img {
-    max-width: 100%;
+    max-width: 75%; /* Zmniejszenie rozmiaru obrazka */
+    display: block; /* Blokowy układ obrazka */
+    margin: 0 auto; /* Wyrównanie do środka */
     border-radius: 8px;
 }
 
