@@ -5,6 +5,35 @@
     padding: 0;
 }
 
+/* Loader styles */
+#loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,78,1) 50%, rgba(0,0,0,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Body styles */
 body, html {
     font-family: Arial, sans-serif;
@@ -214,7 +243,6 @@ nav ul li a:hover::before {
     overflow: hidden;
     width: 30%; /* Dla równego rozłożenia na szerokim ekranie */
     transition: transform 0.3s ease;
-    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -227,7 +255,6 @@ nav ul li a:hover::before {
     width: 100%;
     height: auto;
     vertical-align: middle;
-    border-radius: 10px;
 }
 
 .tile-overlay {
@@ -291,7 +318,7 @@ nav ul li a:hover::before {
 }
 
 .realization-card {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -404,37 +431,41 @@ nav ul li a:hover::before {
     padding: 40px;
     margin-top: 60px;
     text-align: center;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,0,78,1) 50%, rgba(0,0,0,1) 100%);
-    font-family: Arial, sans-serif; /* Spójna czcionka */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(255, 0, 78, 1) 50%, rgba(0, 0, 0, 1) 100%);
+    font-family: 'Roboto', Arial, sans-serif; /* Zmieniona czcionka na bardziej nowoczesną */
 }
 
 .contact-section-info, .contact-form {
     width: 100%;
-    max-width: 1000px; /* Maksymalna szerokość dla wygody czytania */
-    margin-bottom: 40px;
-    background-color: #e0e0e0;
+    max-width: 900px; /* Nieco mniejsza szerokość dla lepszego layoutu */
+    margin-bottom: 50px; /* Większa przestrzeń między sekcjami */
+    background-color: #ffffff; /* Jaśniejsze tło dla lepszego kontrastu */
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Zwiększony zaokrąglenie rogów */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Mocniejszy cień dla lepszego efektu 3D */
+    transition: transform 0.3s ease-in-out; /* Dodanie animacji na hover */
+}
+
+.contact-section-info:hover, .contact-form:hover {
+    transform: translateY(-5px); /* Lekki efekt podniesienia na hover */
 }
 
 .contact-section-info h2, .contact-form h2 {
     margin-bottom: 30px;
-    font-size: 32px;
-    color: #333; /* Stonowany kolor nagłówków */
+    font-size: 34px; /* Większa czcionka nagłówków */
+    color: #222; /* Ciemniejszy kolor nagłówków */
 }
 
 .contact-section-info p, .contact-form label {
     font-size: 18px;
     line-height: 1.8;
-    color: #555; /* Przyjemny kolor tekstu */
+    color: #444; /* Nieco ciemniejszy kolor tekstu */
 }
 
 .contact-section-info a {
     text-decoration: none;
-    color: #000;
-    transition: color 0.3s ease-in-out; /* Płynne przejście koloru */
+    color: #222; /* Ciemniejszy kolor linków */
+    transition: color 0.3s ease-in-out;
 }
 
 .contact-section-info a:hover {
@@ -453,10 +484,10 @@ nav ul li a:hover::before {
     width: 100%;
     padding: 15px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    transition: border-color 0.3s ease-in-out;
-    background-color: #fafafa; /* Delikatne tło dla wejść */
+    border: 1px solid #bbb; /* Lżejszy kolor obramowania */
+    border-radius: 8px; /* Większe zaokrąglenie */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: #f7f7f7; /* Delikatniejsze tło dla wejść */
 }
 
 .contact-form input[type="text"]:focus,
@@ -465,6 +496,7 @@ nav ul li a:hover::before {
 .contact-form textarea:focus {
     outline: none;
     border-color: #FF024F;
+    box-shadow: 0 0 5px rgba(255, 0, 78, 0.3); /* Dodanie delikatnego cienia na focus */
 }
 
 .contact-form textarea {
@@ -475,26 +507,27 @@ nav ul li a:hover::before {
     width: 100%;
     padding: 15px;
     font-size: 18px;
-    background-color: #FF024F;
+    background: linear-gradient(90deg, rgba(255, 2, 79, 1) 0%, rgba(255, 50, 100, 1) 100%);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .contact-form button:hover {
     background-color: #ff306e;
+    transform: scale(1.05); /* Dodanie efektu powiększenia na hover */
 }
 
 .map-container {
     width: 100%;
-    max-width: 1000px; /* Maksymalna szerokość mapy */
+    max-width: 900px;
     height: 400px;
     margin-top: 40px;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Mocniejszy cień dla mapy */
 }
 
 .map {
@@ -509,7 +542,7 @@ nav ul li a:hover::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     margin-top: 60px;
     padding: 40px;
     border-radius: 8px;
@@ -574,7 +607,7 @@ nav ul li a:hover::before {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Dodatkowe wyrównanie elementów */
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -741,12 +774,49 @@ footer {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 
+    .additional-content {
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .image-tile {
+        width: 90%;
+        margin-top: 15px;
+    }
+    
     .about-section {
         display: block;
     }
 
+    .offers {
+        display: block;
+    }
+
+    .offer {
+        margin-top: 20px;
+    }
+
     .slide-text {
         width: 80%;
+    }
+
+    .contact-section {
+        margin-top: 100px;
+        padding: 20px;
+    }
+
+    .contact-section-info, .contact-form {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .footer-content {
+        display: block;
     }
 
     @keyframes slideDown {

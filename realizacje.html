@@ -6,9 +6,13 @@
     <title>DAS - Realizacje</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/DAS_logo.ico">
     <link rel="stylesheet" href="styles.css">
+    <script src="scripts/loadingAnimation.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <div class="wrapper" style="display: none;">
         <header>
             <div class="logo">
                 <a href="index.html">
@@ -42,7 +46,6 @@
                         </div>
                         <div class="realization-info">
                             <h3>Audi A3 8P</h3>
-                            <p><strong>Data:</strong> 01-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, glinkowanie lakieru, dekontaminacja i deironizacja lakieru, 3 etapowe polerowanie maski nadwozia, czyszczenie chromowanej obręczy grilla, aplikacja powłoki ochronnej - Quick Wax, pranie tapicerki, pranie foteli, czyszczenie (bonnetowanie) podsufitki, czyszczenie wnętrza samochodu, dressing wnętrza samochodu, mycie szyb, dressing opon, dressing plastików</p>
                         </div>
                     </div>
@@ -54,91 +57,83 @@
                         </div>
                         <div class="realization-info">
                             <h3>Audi A4 B7</h3>
-                            <p><strong>Data:</strong> 02-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, glinkowanie lakieru, dekontaminacja i deironizacja lakieru, czyszczenie komory silnika, aplikacja 3 miesięcznego wosku hydrofobowego, czyszczenie wnętrza samochodu, mycie szyb, aplikacja "niewidzialnej wycieraczki", detailing felg, aplikacja powłoki ochronnej na felgi, dressing opon, dressing plastików, polerowanie i zabezpieczenie reflektora</p>
                         </div>
                     </div>
                     <!-- Realizacja 3 -->
-                    <div class="realization-card" data-images='["images/Audi_S3_8Y/Bok pasażer przybliżenie - przed.JPG", "images/Audi_S3_8Y/Bok kierowca - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/Audi_S3_8Y/Bok.png", "images/Audi_S3_8Y/Dywaniki.png", "images/Audi_S3_8Y/Interior.png", "images/Audi_S3_8Y/Koncówki wydechu.png", "images/Audi_S3_8Y/Listwa.png", "images/Audi_S3_8Y/Tunel.png"]'>
                         <div class="realization-images">
                             <img src="images/Audi_S3_8Y/Bok pasażer przybliżenie - przed.JPG" alt="Bok - przed" class="before-image">
                             <img src="images/Audi_S3_8Y/Bok kierowca - po.JPG" alt="Bok - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>Audi S3 8Y</h3>
-                            <p><strong>Data:</strong> 03-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, glinkowanie lakieru, dekontaminacja i deironizacja lakieru, aplikacja powłoki ochronnej - Quick Wax, pranie dywaników, czyszczenie wnętrza samochodu, mycie szyb, aplikacja "niewidzialnej wycieraczki", dressing opon, dressing plastików</p>
                         </div>
                     </div>
                     <!-- Realizacja 4 -->
-                    <div class="realization-card" data-images='["images/BMW F30/Przód - przed.JPG", "images/BMW F30/Przód - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/BMW F30/Bok.png", "images/BMW F30/Dach.png", "images/BMW F30/Interior tył.png", "images/BMW F30/Klapa bagażnika.png", "images/BMW F30/Maska.png", "images/BMW F30/Reflektor.png", "images/BMW F30/Interior przód.png"]'>
                         <div class="realization-images">
                             <img src="images/BMW F30/Przód - przed.JPG" alt="Przód - przed" class="before-image">
                             <img src="images/BMW F30/Przód - po.JPG" alt="Przód - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>BMW F30</h3>
-                            <p><strong>Data:</strong> 04-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, glinkowanie lakieru, dekontaminacja i deironizacja lakieru, 3 - etapowe polerowanie maski samochodu, 3 - etapowe polerowanie klapy bagażnika, 3 - etapowe polerowanie błotników samochodu, 3 - etapowe polerowanie drzwi kierowcy samochodu, 3 - etapowe polerowanie tylnego zderzaka, polerowanie i zabezpieczenie reflektorów, aplikacja 3 - miesięcznego wosku hydrofobowego, detailing wnętrza, dressing wnętrza, mycie szyb, dressing opon, aplikacja powłoki ochronnej na felgi, dressing plastików</p>
                         </div>
                     </div>
                     <!-- Realizacja 5 -->
-                    <div class="realization-card" data-images='["images/Dodge_Challenger/Przód bok pasażer - przed.JPG", "images/Dodge_Challenger/Przód bok pasażer - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/Dodge_Challenger/Bok zbliżenie.png", "images/Dodge_Challenger/Bok.png", "images/Dodge_Challenger/Dach.png", "images/Dodge_Challenger/Felga.png", "images/Dodge_Challenger/Interior przód.png", "images/Dodge_Challenger/Interior tył.png", "images/Dodge_Challenger/Kierownica.png", "images/Dodge_Challenger/Klapa tył.png", "images/Dodge_Challenger/Maska.png", "images/Dodge_Challenger/Przód zbliżenie.png", "images/Dodge_Challenger/Tunel.png"]'>
                         <div class="realization-images">
                             <img src="images/Dodge_Challenger/Przód bok pasażer - przed.JPG" alt="Bok - przed" class="before-image">
                             <img src="images/Dodge_Challenger/Przód bok pasażer - po.JPG" alt="Bok - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>Dodge Challenger</h3>
-                            <p><strong>Data:</strong> 05-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, dekontaminacja i deironizacja lakieru, glinkowanie lakieru, aplikacja 3 - miesięcznego wosku hydrofobowego, detailing wnętrza, dressing wnętrza, mycie szyb, detailing felg, dressing opon, aplikacja powłoki ochronnej na felgi, dressing plastików</p>
                         </div>
                     </div>
                     <!-- Realizacja 6 -->
-                    <div class="realization-card" data-images='["images/Renault_Kangoo/Przód - przed.JPG", "images/Renault_Kangoo/Przód - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/Renault_Kangoo/Bagażnik.png", "images/Renault_Kangoo/Interior przód.png", "images/Renault_Kangoo/Interior tył.png"]'>
                         <div class="realization-images">
                             <img src="images/Renault_Kangoo/Przód - przed.JPG" alt="Środek - przed" class="before-image">
                             <img src="images/Renault_Kangoo/Przód - po.JPG" alt="Środek - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>Renault Kangoo</h3>
-                            <p><strong>Data:</strong> 06-07-2024</p>
                             <p><strong>Usługa:</strong> DAS Mobile Wash, obejmowała detailing wnętrza samochodu, dressing wnętrza samochodu, mycie szyb</p>
                         </div>
                     </div>
                     <!-- Realizacja 7 -->
-                    <div class="realization-card" data-images='["images/Renault_Master/Interior - przed.JPG", "images/Renault_Master/Interior - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/Renault_Master/Bok.png", "images/Renault_Master/Fotele.png", "images/Renault_Master/Interior.png", "images/Renault_Master/Kierownica.png", "images/Renault_Master/Kolo.png", "images/Renault_Master/Paka.png", "images/Renault_Master/Przód.png", "images/Renault_Master/Tył.png", "images/Renault_Master/Wykładzina.png"]'>
                         <div class="realization-images">
                             <img src="images/Renault_Master/Interior - przed.JPG" alt="Środek - przed" class="before-image">
                             <img src="images/Renault_Master/Interior - po.JPG" alt="Środek - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>Renault Master</h3>
-                            <p><strong>Data:</strong> 07-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, pranie foteli, czyszczenie wnętrza samochodu, dressing wnętrza samochodu, mycie szyb, dressing opon, dressing plastików</p>
                         </div>
                     </div>
                     <!-- Realizacja 8 -->
-                    <div class="realization-card" data-images='["images/Seat_Ibiza/Przód bok pasażer - przed.JPG", "images/Seat_Ibiza/Przód bok pasażer - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/Seat_Ibiza/Bagażnik.png", "images/Seat_Ibiza/Bok kierowca.png", "images/Seat_Ibiza/Bok pasażer.png", "images/Seat_Ibiza/Interior przód kierowca.png", "images/Seat_Ibiza/Interior przód pasażer.png", "images/Seat_Ibiza/Interior tył.png", "images/Seat_Ibiza/Przód.png", "images/Seat_Ibiza/Reflektor.png", "images/Seat_Ibiza/Tunel.png"]'>
                         <div class="realization-images">
                             <img src="images/Seat_Ibiza/Przód bok pasażer - przed.JPG" alt="Bok - przed" class="before-image">
                             <img src="images/Seat_Ibiza/Przód bok pasażer - po.JPG" alt="Bok - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>Seat Ibiza</h3>
-                            <p><strong>Data:</strong> 08-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, glinkowanie lakieru, dekontaminacja i deironizacja lakieru, aplikacja powłoki ochronnej - Quick Wax, czyszczenie wnętrza samochodu, dressing wnętrza samochodu, mycie szyb, dressing opon, dressing plastików, regeneracja reflektorów</p>
                         </div>
                     </div>
                     <!-- Realizacja 9 -->
-                    <div class="realization-card" data-images='["images/Volvo_XC60/Bok kierowca - przed.JPG", "images/Volvo_XC60/Bok kierowca - po.JPG"]'>
+                    <div class="realization-card" data-images='["images/Volvo_XC60/Bok kierowca.png", "images/Volvo_XC60/Bok pasażer.png", "images/Volvo_XC60/Felga.png", "images/Volvo_XC60/Interior przód.png", "images/Volvo_XC60/Kanapa przód.png", "images/Volvo_XC60/Komora silnika.png", "images/Volvo_XC60/Maska.png", "images/Volvo_XC60/Przód.png", "images/Volvo_XC60/Tylna kanapa.png", "images/Volvo_XC60/Tył.png"]'>
                         <div class="realization-images">
                             <img src="images/Volvo_XC60/Bok kierowca - przed.JPG" alt="Bok - przed" class="before-image">
                             <img src="images/Volvo_XC60/Bok kierowca - po.JPG" alt="Bok - po" class="after-image">
                         </div>
                         <div class="realization-info">
                             <h3>Volvo XC60</h3>
-                            <p><strong>Data:</strong> 09-07-2024</p>
                             <p><strong>Usługa:</strong> mycie wstępne, mycie zasadnicze, glinkowanie lakieru, dekontaminacja i deironizacja lakieru, aplikacja powłoki ochronnej - Quick Wax, pranie tapicerki, pranie foteli, czyszczenie wnętrza samochodu, dressing wnętrza samochodu, mycie szyb, dressing opon, dressing plastików, aplikacja powłoki ochronnej na felgi</p>
                         </div>
                     </div>

@@ -7,9 +7,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/DAS_logo.ico">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="scripts/loadingAnimation.js"></script>
 </head>
 <body>
-    <div class="wrapper">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <div class="wrapper" style="display: none;">
         <header>
             <div class="logo">
                 <a href="index.html">
@@ -67,12 +71,12 @@
         </section>
         <section>
             <div class="intro-text">
-                <p>Mamy przyjemność zaoferować Państwu trzy autorskie warianty atrakcyjnych usług, które oddajemy do Państwa dyspozycji!</p>
+                <p>Mamy przyjemność zaoferować Państwu cztery autorskie warianty atrakcyjnych usług, które oddajemy do Państwa dyspozycji!</p>
             </div>
         </section>
         <section class="additional-content">
             <div class="image-tile">
-                <img src="images/polerowanie.jpg" alt="DAS PACKS">
+                <img src="images/mycie.png" alt="DAS PACKS">
                 <div class="tile-overlay">
                     <div class="overlay-text">
                         <h3>DAS PACKS</h3>
@@ -81,19 +85,28 @@
                 </div>
             </div>
             <div class="image-tile">
-                <img src="images/woskowanie.jpg" alt="DAS MOBILE">
+                <img src="images/nablyszczanie.jpg" alt="DAS MOBILE">
                 <div class="tile-overlay">
                     <div class="overlay-text">
-                        <h3>DAS MOBILE</h3>
+                        <h3>DAS MOBILE WASH</h3>
                         <a href="oferta.html" class="btn">Szczegóły pakietu</a>
                     </div>
                 </div>
             </div>
             <div class="image-tile">
-                <img src="images/nablyszczanie.jpg" alt="DAS SINGLE">
+                <img src="images/polerowanie.jpg" alt="DAS SINGLE">
                 <div class="tile-overlay">
                     <div class="overlay-text">
-                        <h3>DAS SINGLE</h3>
+                        <h3>DAS SINGLE WASH</h3>
+                        <a href="oferta.html" class="btn">Szczegóły pakietu</a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-tile">
+                <img src="images/woskowanie.jpg" alt="DAS SEASON">
+                <div class="tile-overlay">
+                    <div class="overlay-text">
+                        <h3>DAS SEASON WASH</h3>
                         <a href="oferta.html" class="btn">Szczegóły pakietu</a>
                     </div>
                 </div>
